@@ -1,0 +1,155 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>validation de paiement</title>777
+        <link rel="stylesheet" href="CSS/paiement.css">
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <script>
+                function verif() {
+                            cin =f.numberCart.value;
+                            if(!((cin.charAt(0)=='0')||(cin.charAt(0) == '1')))
+                                {alert("verife numero de CIN")}
+                    p = f.p.selectedIndex;   
+                            if (p ==0 ) {
+                                alert(' veuillez choisir un Succursale');
+                                return false;  
+
+                            }
+                    }
+        </script>
+    </head>
+
+    <body>
+        <!-----------------------------------------------------------section header------------------------------------>
+        <!-- Start Header -->
+        <div class="header">
+
+            <div class="container">
+                <a href="#" class="logo">
+
+                    <img src="les_images/LOGO-CG.png" alt="Logo" />
+                </a>
+                <div class="containerin">
+                    <i id="menu-btn" class="fas fa-bars toggle-menu"></i>
+                    <div class="nav">
+                    <a href="inde.html">HOME</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#vid">FEATURES</a>
+                    <a href="paiement.html">PAIEMENT</a>
+                    <a href="admin.html">ADMINISTRATIVE</a>
+                    <a href="LOG.HTML">LOG IN</a>
+                    </div>
+                    <div class="form">
+                        <i class="fas fa-search"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Start form -->
+        <div class="formpai">
+
+            <form name="f" method="post" action="">
+                <h2><em> ADMINISTRATEUR </em> </h2>
+                <div>
+                    <label for="login">Login:</label>
+                    <input type="email" name="login" id="Login" required>
+                </div>
+                <div>
+
+                    <label for="mdp">Password:</label>
+                    <input type="password" name="password" id="mdp">
+                </div>
+                <div>
+                    <label for="numero de carte">Number of CIN:</label>
+                    <input type="text" name="numberCart" id="num carte" required pattern="[0-9]{8}"
+                        onClick="tester1()">
+                </div>
+                <div>
+                    <label class="inp" for="Pays">Branch:</label>
+                    <select name="p" id="p">
+                        <option selected>choose a Governorate </option>
+                        <option>Ariana</option>
+                        <option>Tunis</option>
+                        <option>Ben arous</option>
+                        <option>Bizerte</option>
+                        <OPTION>Gafsa</OPTION>
+                    </select>
+                </div>
+                <div>
+
+                </div>
+                <div>
+                    <input type="submit" value="Send" class="btnE" onClick="verif()">
+                    <input type="reset" value="Reset" class="btnA">
+                </div>
+            </form>
+        </div>
+        <!-- end form -->
+        <!--Start footer   -->
+
+        <Div class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>Quick Links</h3>
+                <a class="links" href="inde.html">HOME</a>
+                <a class="links" href="#about">ABOUT</a>
+                <a class="links" href="#vid">FEATURES</a>
+                <a class="links" href="paiement.html">PAIEMENT</a>
+                <a class="links" href="admin.html">ADMINISTRATIVE</a>
+                <a class="links" href="LOG.HTML">LOG IN</a>
+                </div>
+
+                <div class="box">
+                    <h3>Opening Hours</h3>
+                    <p> Monday : <i> 7:00am - 10:30pm </i> </p>
+                    <p> Tuesday : <i> 7:00am - 10:30pm </i> </p>
+                    <p> Wednesday : <i> 7:00am - 10:30pm </i> </p>
+                    <p> Friday : <i> 7:00am - 10:30pm </i> </p>
+                    <p> Saturday : <i> 7:00am - 10:30pm </i> </p>
+                    <p> Sunday : <i> closed </i> </p>
+                </div>
+
+                <div class="box">
+                    <h3>Opening Hours</h3>
+                    <p> <i class="fas fa-phone"></i> +21651075984 </p>
+                    <p> <i class="fas fa-phone"></i> +21648738284 </p>
+                    <p> <i class="fas fa-envelope"></i> JemaHamza@gmail.com </p>
+                    <p> <i class="fas fa-map"></i> Tunis, Manar1 - 1019 </p>
+                    <div class="share">
+                        <a href="https://www.facebook.com/californiagymtunisia/" class="fab fa-facebook-f"></a>
+                        <a href="https://www.instagram.com/california_gym/" class="fab fa-instagram"></a>
+                        <a href="https://www.linkedin.com/company/california-gym-tunisia/?originalSubdomain=tn"
+                            class="fab fa-linkedin"></a>
+                        <a href="https://www.pinterest.com/californiagym/" class="fab fa-pinterest"></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>newsletter</h3>
+                    <p>subscribe for latest updates</p>
+                    <form action="">
+                        <input type="email" name="" class="email" placeholder="enter your email" id="">
+                        <input type="submit" value="subscribe" class="btn">
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="credit"> Copyright <span>© 2016 Galaxy Gym</span> | all rights reserved! </div>
+
+        <!--END footer  -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+        <script src="js.js"></script>
+    </body>
+
+</html>
